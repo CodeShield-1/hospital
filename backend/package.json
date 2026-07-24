@@ -1,0 +1,22 @@
+{
+  "name": "hms-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hospital Management System - Backend Services (PHP & Node.js)",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../appointment-service && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:appointment": "cd appointment-service && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:appointment\"",
+    "start:server": "cd server && npm start",
+    "start:appointment": "cd appointment-service && npm start",
+    "start": "concurrently \"npm run start:server\" \"npm run start:appointment\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "mongodb": "^7.5.0"
+  }
+}
+
